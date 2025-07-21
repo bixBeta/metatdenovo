@@ -44,8 +44,8 @@ process BBMAP_ALIGN {
         $input \\
         out=${prefix}.bam \\
         $args \\
-        threads=$task.cpus \\
-        -Xmx${task.memory.toGiga()}g \\
+        threads=24 \\
+        -Xmx100g \\
         &> ${prefix}.bbmap.log
 
     cat <<-END_VERSIONS > versions.yml
